@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="84eb514b2fc64491916d60be9122941b" Name="Diagram1">
+        <EntityTypeShape EntityType="eCommerceModel.tbl_Admin" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eCommerceModel.tbl_category" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="eCommerceModel.tbl_Order" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eCommerceModel.tbl_product" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="eCommerceModel.tbl_productsOrdered" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="eCommerceModel.FK__tbl_categ__cat_f__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="eCommerceModel.FK__tbl_produ__pro_f__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="eCommerceModel.FK__tbl_produ__op_fk__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="eCommerceModel.FK__tbl_produ__op_pr__300424B4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

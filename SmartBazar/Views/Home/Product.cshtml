@@ -1,0 +1,326 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <!-- products -->
+    <div class="products">
+        <div class="container">
+            <div class="col-md-9 product-w3ls-right">
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb breadcrumb1">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Products</li>
+                </ol>
+                <div class="clearfix"> </div>
+                <!-- //breadcrumbs -->
+                <div class="product-top">
+                    <h4>Electronics</h4>
+                    <ul>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter By<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Low price</a></li>
+                                <li><a href="#">High price</a></li>
+                                <li><a href="#">Latest</a></li>
+                                <li><a href="#">Popular</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brands<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Samsung</a></li>
+                                <li><a href="#">LG</a></li>
+                                <li><a href="#">Sony</a></li>
+                                <li><a href="#">Other</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="products-row">
+
+                    @if (ViewBag.ProductList != null)
+                    {
+                        foreach (var item in ViewBag.ProductList as List<SmartBazar.Models.View_Models.Product>)
+                        {
+     
+
+                            <div class="col-md-3 product-grids">
+                                <div class="agile-products">
+                                    <div class="new-tag"><h6>20%<br>Off</h6></div>
+                                    <a href="@Url.Action("ProductDetails", new {id=item.pro_id })"><img style="height: 150px" class="img-responsive" alt="img"></a>
+                                    <div class="agile-product-text">
+                                        <h5><a href="@Url.Action("ProductDetails", new {id=item.pro_id })">@item.pro_name</a></h5>
+                                        <h6><del>@item.pro_price + @item.pro_old_price</del> @item.pro_price</h6>                       
+                                           
+                                           
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    }
+
+
+
+
+
+
+                    <div class="clearfix"> </div>
+                </div>
+                <!-- add-products -->
+                <div class="w3ls-add-grids w3agile-add-products">
+                    <a href="#">
+                        <h4>TOP 10 TRENDS FOR YOU FLAT <span>20%</span> OFF</h4>
+                        <h6>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
+                    </a>
+                </div>
+                <!-- //add-products -->
+            </div>
+            <div class="col-md-2 rsidebar">
+                <div class="rsidebar-top">
+                             
+                </div>
+                <div class="related-row">
+                    <img src="~/Content/images/ad.gif" style=" width: 100%; max-height: 1000px" />
+                </div>
+               
+            </div>
+            <div class="clearfix"> </div>
+            <!-- recommendations -->
+            <div class="recommend">
+                <h3 class="w3ls-title">Our Recommendations </h3>
+                <script>
+					$(document).ready(function() {
+						$("#owl-demo5").owlCarousel({
+
+						  autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+						  items :4,
+						  itemsDesktop : [640,5],
+						  itemsDesktopSmall : [414,4],
+						  navigation : true
+
+						});
+
+					});
+                </script>
+                <div id="owl-demo5" class="owl-carousel">
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <div class="new-tag"><h6>20% <br> Off</h6></div>
+                            <a href="products1.html"><img src="images/f2.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products1.html">Women Sandal</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$20</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="Women Sandal" />
+                                    <input type="hidden" name="amount" value="20.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <a href="products.html"><img src="images/e4.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products.html">Digital Camera</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$80</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="Digital Camera" />
+                                    <input type="hidden" name="amount" value="100.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <div class="new-tag"><h6>New</h6></div>
+                            <a href="products4.html"><img src="images/s1.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products4.html">Roller Skates</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$180</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="Roller Skates" />
+                                    <input type="hidden" name="amount" value="180.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <a href="products1.html"><img src="images/f1.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products1.html">T Shirt</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$10</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="T Shirt" />
+                                    <input type="hidden" name="amount" value="10.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <div class="new-tag"><h6>New</h6></div>
+                            <a href="products6.html"><img src="images/p1.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products6.html">Coffee Mug</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$14</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="Coffee Mug" />
+                                    <input type="hidden" name="amount" value="14.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <div class="new-tag"><h6>20% <br> Off</h6></div>
+                            <a href="products6.html"><img src="images/p2.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products6.html">Teddy bear</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$20</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="Teddy bear" />
+                                    <input type="hidden" name="amount" value="20.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <a href="products4.html"><img src="images/s2.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products4.html">Football</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$70</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="Football" />
+                                    <input type="hidden" name="amount" value="70.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="glry-w3agile-grids agileits">
+                            <div class="new-tag"><h6>Sale</h6></div>
+                            <a href="products3.html"><img src="images/h1.png" alt="img"></a>
+                            <div class="view-caption agileits-w3layouts">
+                                <h4><a href="products3.html">Wall Clock</a></h4>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <h5>$80</h5>
+                                <form action="#" method="post">
+                                    <input type="hidden" name="cmd" value="_cart" />
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="Wall Clock" />
+                                    <input type="hidden" name="amount" value="80.00" />
+                                    <button type="submit" class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //recommendations -->
+        </div>
+    </div>
+    <!--//products-->
+    <!-- footer-top -->
+    <div class="w3agile-ftr-top">
+        <div class="container">
+            <div class="ftr-toprow">
+                <div class="col-md-4 ftr-top-grids">
+                    <div class="ftr-top-left">
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                    </div>
+                    <div class="ftr-top-right">
+                        <h4>FREE DELIVERY</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 ftr-top-grids">
+                    <div class="ftr-top-left">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div class="ftr-top-right">
+                        <h4>CUSTOMER CARE</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 ftr-top-grids">
+                    <div class="ftr-top-left">
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                    </div>
+                    <div class="ftr-top-right">
+                        <h4>GOOD QUALITY</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //footer-top -->
+    <!-- subscribe -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="col-md-6 social-icons w3-agile-icons">
+                <h4>Keep in touch</h4>
+                <ul>
+                    <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
+                    <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
+                    <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
+                    <li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
+                    <li><a href="#" class="fa fa-rss icon rss"> </a></li>
+                </ul>
+                <ul class="apps">
+                    <li><h4>Download Our app : </h4> </li>
+                    <li><a href="#" class="fa fa-apple"></a></li>
+                    <li><a href="#" class="fa fa-windows"></a></li>
+                    <li><a href="#" class="fa fa-android"></a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 subscribe-right">
+                <h4>Sign up for email and get 25%off!</h4>
+                <form action="#" method="post">
+                    <input type="text" name="email" placeholder="Enter your Email..." required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //subscribe -->
